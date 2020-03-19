@@ -33,12 +33,23 @@
       <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> View Receipes!</h1>
     </div>
 
+    <form id="recipe-form">
+      <label for="recipes-input">Recipes Search</label>
+      <input type="text" id="keywordSearch">
+      <button id="submitBtn">Submit</button>
+      <br>
+      <br>
+
+      
+      <div id=resultsList></div>
+    </form>
 
     <!--Search with javascript-->
-    <div class="results">
+    
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="./script.js"></script>
 </body>
 
 </html>
