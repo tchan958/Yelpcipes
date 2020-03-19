@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <meta charset="UTF-8">
+        <head>
+        <title>Post Ingredients</title>
+        <link rel='stylesheet' href='style.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        </head>
+
+        <body>
+            <!--Logo/Menu top of page-->
+            <div class='home-logo'>
+                <p><a href="index.html">Instagredients</a></p>
+            </div>
+            <div class='menu-drop'>
+            <ul id="dropdown" class="dropdown-content">
+               </ul>
+              <a class="btn dropdown-trigger" href="#!" data-target="dropdown">Menu<i class="material-icons right">arrow_drop_down</i></a>
+            </div>   
+            <!--Page header-->
+            <div id='header'>
+                <p>Sign Up</p>
+            </div>
+
+            <!--Sign up input-->
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6 firstNameEl">
+                      <input placeholder="First Name" id="first_name" type="text" class="validate">
+                      <label for="first_name"></label>
+                    </div>
+                    <div class="input-field col s6 lastNameEl">
+                      <input placeholder="Last Name" id="last_name" type="text" class="validate">
+                      <label for="last_name"></label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 emailEl">
+                      <input placeholder="Email" id="signUp-password" type="email" class="validate">
+                      <label for="email"></label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 passwordEl">
+                      <input placeholder="Password" id="signUp-confpassword" type="password" class="validate">
+                      <label for="password"></label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 confPasswordEl">
+                      <input placeholder="Confirm Password" id="email" type="password" class="validate">
+                      <label for="confPassword"></label>
+                    </div>
+                  </div>
+                  </form>
+                  </div>
+                  <!--Address input-->
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12 addressEl">
+                          <textarea placeholder="Address" id="address" class="materialize-textarea"></textarea>
+                          <label for="address"></label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!--City input-->
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12 cityEl">
+                          <textarea placeholder="City" id="address" class="materialize-textarea"></textarea>
+                          <label for="address"></label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                <!--State Input-->
+                <div class="row">
+                    <form class="col s12 stateEl">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea placeholder="State" id="address" class="materialize-textarea"></textarea>
+                          <label for="address"></label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!--Zip Code-->
+                  <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12 zipcodeEl">
+                          <textarea placeholder="Zip Code" id="address" class="materialize-textarea"></textarea>
+                          <label for="address"></label>
+                        </div>
+                      </div>
+                    </form>
+                    <a class="waves-effect waves-light btn-large submitButton">Submit</a>
+                  </div>
