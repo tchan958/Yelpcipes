@@ -1,0 +1,22 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+.navbar{
+  padding: 0;
+  color: #ffffff;
+}
+
+.nav-name{
+  height: 50px;
+  padding: 10px;
+  background-color: #4aaaa5;
+  font-family: 'Georgia', Times, 'Times New Roman', serif;
+  font-size: 22px;
+  margin-left: 250px;
+}
+
+.nav{
+  padding: 0!important ;
+}
