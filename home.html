@@ -2,84 +2,49 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://colorhunt.co/palette/174969" rel="colors">
-    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="/styles.css">
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+    <body class="bg-color">
+    <div class="bg-color">
     <!--Nav Bar-->
-    <div class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-        <div id="header-menu" class="cf nav-click">
-            <div id="hm-main" class="hm-btn sep1">
-                <div class="sep2 nav">
-                    <a href="#" href="" class="nav-login text-white">Login</a>
-                    <a href="#" href="" class="nav-signup text-white">Sign Up</a>
-                </div>
-            </div>
+    <nav>
+        <div class="nav-wrapper">
+          <img src="./yelpcipe2.png" alt="">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href=""></a>Login</li>
+            <li><a href=""></a>Resgister</li>
+            <li><a href=""></a></li>
+          </ul>
         </div>
-    </div>
+      </nav>
+    
 
     <div class="container">
-        <!-- jumbotron of the header/-->
-        <div class="container-contact100">
-            <div class="wrap-contact100">
-                <form class="contact100-form validate-form">
-                    <span class="contact100-form-title">
-                        Home
-                    </span>
+        <div class="header-center">
+            <h1>Home</h1>
+        </div>
+        <div class="input-container">
+            <input placeholder="search:" type="text">
+            <input placeholder="location:" type="text">
+            <button class="input-button">Search Yelpcipes</button>
 
-                    <div class="wrap-input100 input100-select">
-                        <span class="label-input100">Enter Food Available in my Fridge</span>
-                        <div>
-                            <select class="selection-2" name="choice">
-                                <option>Pick Here</option>
-                                <option>Protein</option>
-                                <option>Veggies</option>
-                                <option>Carbs</option>
-                                <option>Fruits</option>
-                            </select>
-                        </div>
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="wrap-input100 input100-select">
-                        <span class="label-input100">Results</span>
-                        <div>
-                            <select class="selection-2" name="options">
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                                <option></option>
-                            </select>
-                        </div>
-                        <span class="focus-input100"></span>
-                    </div>
-
-                    <div class="container-contact100-form-btn">
-                        <div class="wrap-contact100-form-btn">
-                            <div class="contact100-form-bgbtn"></div>
-                            <button class="contact100-form-btn">
-                                <span>
-                                    Submit
-                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
+        </div>
+        </div>
+    </div>
                 <!--Import jQuery before materialize.js-->
                 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-                <script type="text/javascript" src="js/materialize.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
