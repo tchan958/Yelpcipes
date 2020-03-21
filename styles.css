@@ -20,3 +20,25 @@
 .nav{
   padding: 0!important ;
 }
+
+.header-center{
+  text-align: center;
+}
+
+.input-button{
+  position: relative;
+  bottom: 50px;
+  left: 880px;
+  padding: 5px 10px;
+  background-color: #ee6e73;
+  border-radius: 5px;
+  color: white;
+}
+
+.inline-block{
+   display: inline-block;
+}
+
+p{
+  color:black;
+}

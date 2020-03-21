@@ -2,36 +2,32 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://colorhunt.co/palette/174969" rel="colors">
-  <link type="text/css" rel="stylesheet" href="styles.css">
+  <link type="text/css" rel="stylesheet" href="/styles.css">
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
-  <!--Nav Bar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <a href="#" class="nav-login text-white">Login</a>
-    <a href="#" class="nav-signup text-white">Sign Up</a>
-    <br>
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto">
+<body class="bg-color">
+  <div class="bg-color">
+    <!--Nav Bar-->
+    <nav>
+      <div class="nav-wrapper">
+        <img src="./yelpcipe2.png" alt="">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href=""></a>Login</li>
+          <li><a href=""></a>Resgister</li>
+          <li><a href=""></a></li>
+        </ul>
       </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <!-- jumbotron of the header/-->
-    <div class="jumbotron col-sm-10 col-md-offset-1">
-      <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> View Receipes!</h1>
-    </div>
+    </nav>
 
     <form id="recipe-form">
       <label for="recipes-input">Recipes Search</label>
@@ -44,11 +40,21 @@
       <div id=resultsList></div>
     </form>
 
+    <div class="container">
+      <div class="header-center">
+        <h1>Click to View Recipes Detials</h1>
+      </div>
+      <div class="input-container inline-block">
+        <h1 class="inline-block">Recipe 1</h1>
+        <h3 class="inline-block"> Chicken noddle</h3>
+        <button class="input-button">Save</button>
+      </div>
+    </div>
     <!--Search with javascript-->
     
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="./script.js"></script>
 </body>
 
