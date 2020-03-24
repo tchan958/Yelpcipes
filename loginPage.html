@@ -7,12 +7,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         </head>
 
     <body>
         <!--Logo/Menu top of page-->
         <div class='home-logo'>
-            <p><a href="index.html">Instagredients</a></p>
+          <p><a href="index.html"><img src="images/yelpcipeimg2.png"></a></p>
         </div>
         <div class='menu-drop'>
         <ul id="dropdown" class="dropdown-content">
@@ -25,29 +26,30 @@
         </div>
         <!--Login information-->
         <!--email input section-->
-        <div class="email-row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
-                  <span class="helper-text" data-error="wrong" data-success="right"></span>
-                </div>
-              </div>
-            </form>
+        <div class="row">
+          <div class="input-field col s12 emailEl">
+            <input placeholder="Email" id="email" type="email" class="validate">
+            <label for="email"></label>
+            <span class="helper-text" data-error="wrong" data-success="right"></span>
           </div>
+        </div>
           <!--password input section-->
-          <div class="pswd-row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" class="materialize-textarea"></textarea>
-                  <label for="textarea1">Password</label>
-                </div>
-              </div>
-            </form>
+          <div class="row">
+            <div class="input-field col s12 passwordEl">
+              <input placeholder="Password" id="textarea1" type="password" class="validate">
+              <label for="password"></label>
+            </div>
+          </div>
             <!--Login button-->
-            <a class="waves-effect waves-light btn-large">Login</a>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+              </div>
+            </div>
+
           </div>
 
           
@@ -58,7 +60,7 @@
         
         
         
-        <script src='script.js'></script>
+        <script src='localStorage.js'></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>

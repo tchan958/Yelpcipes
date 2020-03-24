@@ -1,6 +1,4 @@
-.top-nav{
-    display: inline-block;
-}
+
 
 .home-logo {
     height: inherit;
@@ -10,13 +8,13 @@
     font-size: 40px;
     font-weight: 300;
     line-height: 1.333;
-    color: #455a64;
+    color: #f0134d;
     margin-left: 10px;
 
 }
 
 .menu-drop{
-    position:absolute; left:80%; top:7%
+    position:absolute; left:80%; top:18%
 }
 
 #header{
@@ -31,3 +29,13 @@
 .submitButton{
     margin-left: 10px;
 }
+
+.input-button{
+    position: relative;
+    bottom: 50px;
+    left: 880px;
+    padding: 5px 10px;
+    background-color: #EE6E73;
+    border-radius: 5px;
+    color: white;
+  }
