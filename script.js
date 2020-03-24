@@ -10,62 +10,138 @@ $("#submitBtn").on("click", function displayInfo(event) {
     console.log(keywordSearch);
 
 
-var queryURL = "https://api.edamam.com/search?q=" + keywordSearch + "&app_id=d5baaeda&app_key=b58e5e8313bfda2a320bd5a85b6d9ff5"
+    var queryURL = "https://api.edamam.com/search?q=" + keywordSearch + "&to=30&app_id=d5baaeda&app_key=b58e5e8313bfda2a320bd5a85b6d9ff5"
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-    .then(function(response) {
-        var results = response.data;
-        console.log(response);
-        console.log(response.hits[0].recipe.image)
+    $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+        .then(function (response) {
+            var results = response.data;
+            console.log(response);
+            console.log(response.hits[0].recipe.image)
 
+            var row = $("<div>").addClass("row").appendTo($("#resultsList"));
+            for (var i = 0; i < 30; i++) {
 
-        for (var i = 0; i < 10; i++){
-
-      
-        // Storing image
-        var imgURL = response.hits[i].recipe.image;
-        // Creating an element to have the image displayed
-        var image = $("<img>").attr("src", imgURL);
+                //creating div row to contain Cards
 
 
-        // Storing the title data
-        var title = response.hits[i].recipe.label;
-        console.log(title);
+                var card = $("<div>").addClass("card col m4 l4").appendTo(row);
+                // var cardTitle = $("<span>").addClass("favorite").appendTo(card);
 
-        // Creating an element to have the title displayed
-        var pOne = $("<p>").text("Recipe: " + title);
-        
-        // Storing ingredients
-        var ingredients = response.hits[i].recipe.ingredientLines;
-        // Creating an element to have the ingredients displayed
-        var ptwo = $("<p>").text("Ingredients: " + ingredients);
+                var cardImage = $("<div>").addClass("card-image waves-effect waves-block waves-light").appendTo(card);
 
-        // Instructions button
-        var instructions = response.hits[i].recipe.url;
-        // Creating an element to have the ingredients displayed
-        var pthree = $("<a>");
-        pthree.attr("href", instructions);
-        pthree.html("Instructions");
-        
-        // Displaying the title
-        $("#resultsList").append(image);
-        $("#resultsList").append(pOne);
-        $("#resultsList").append(ptwo);
-        $("#resultsList").append(pthree);
-        $("#resultsList").append("<br>");
+                var activator = $("<img>").addClass("activator");
 
-    }
-        
-    });
 
+                // Storing image
+                var imgURL = response.hits[i].recipe.image;
+
+                // Creating an element to have the image displayed
+                // var image = $("<img>").attr("src", imgURL);
+
+                activator.attr("src", imgURL)
+                cardImage.append(activator);
+
+                var cardContent = $("<div>").addClass("card-content").appendTo(card);
+                var cardTitle = $("<span>").addClass("card-title activator grey-text text-darken-4").appendTo(cardContent);
+                var title = response.hits[i].recipe.label;
+                cardTitle.html(title);
+                var iElement1 = $("<i>").addClass("material-icons right more_vert");
+                iElement1.html("more_vert")
+                cardTitle.append(iElement1);
+                var instructions = response.hits[i].recipe.url;
+                var pOne = $("<p>").appendTo(cardContent);
+                var link = $("<a>").appendTo(pOne);
+                link.addClass("instructions");
+                link.attr("href", instructions);
+                link.attr("target", "_blank");
+                link.html("Instructions");
+
+
+                var cardReveal = $("<div>").addClass("card-reveal").appendTo(card);
+                var cardTitle = $("<span>").addClass("card-title grey-text text-darken-4").appendTo(cardReveal);
+
+                cardTitle.html("Ingredients");
+                cardTitle.attr("<br>");
+                var iElement = $("<i>").addClass("material-icons right");
+                iElement.html("close")
+                cardTitle.append(iElement);
+                var ptwo = $("<p>").appendTo(cardReveal);
+                var ingredients = response.hits[i].recipe.ingredientLines;
+
+
+                for (var j = 0; j < ingredients.length; j++) {
+                    var ingredient = ingredients[j];
+                    var listItem = $("<li>").text(ingredient);
+
+                    ptwo.append(listItem);
+
+
+                }
+
+                var favIcon = $("<i>").addClass("heart fa fa-heart-o");
+                // favIcon.html("favorite_border");
+                card.prepend(favIcon);
+                $(".heart").css({
+                    "position": "relative",
+                    "left": "90%",
+                    "padding": "12px",
+                    "color": "red",
+                    "font-size": "25px",
+                })
+                $("i.more_vert").css({
+                    "position": "relative",
+
+                })
+
+                $(".heart.fa").click(function() {
+                    $(this).toggleClass("fa-heart fa-heart-o");
+                  });
+
+                
+                
+                
+                // function saveFav() {
+                //     var liked = document.querySelector(".heart.fa").className;
+                //     var likedRecipe = document.querySelector(".card-title").textContent;
+                //     var likedLink =  document.querySelector(".instructions").outerHTML;
+                    
+                
+                //     let function_array = []
+                //     if(liked === "heart fa fa-heart"){
+                //         function_array.push(likedRecipe)
+                //         function_array.push(likedLink)
+                //         console.log(liked);
+                //     }
+                // }
+                //     saveFav();
+
+
+            }
+
+        });
+       
 });
 
+$(".heart.fa").click(function() {
+    $(this).toggleClass("fa-heart fa-heart-o");
+  });
+
+// var whiteHeart = 'favorite_border';
+// var blackHeart = 'favorite';
+// var button = document.querySelector('.small');
+// button.addEventListener('click', toggle);
+
+// function toggle() {
+//     var like =  button.textContent;
+//     if (like == whiteHeart) {
+//         button.textContent = blackHeart;
+//     } else {
+//         button.textContent = whiteHeart;
+//     }
+// }
 
 
-
-
-
-
+  
