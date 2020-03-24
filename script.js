@@ -22,8 +22,18 @@ $("#submitBtn").on("click", function displayInfo(event) {
             console.log(response.hits[0].recipe.image)
 
             var row = $("<div>").addClass("row").appendTo($("#resultsList"));
-            for (var i = 0; i < 30; i++) {
+            $("<i>").click(function(event){ 
+                if (event.target.className === "fa-heart-o") {
+                // console.log($(this));
+                $(this).toggleClass("fa-heart fa-heart-o");
+                console.log("click");
+                
+                }
+            });
 
+            for (var i = 0; i < 30; i++) {
+                 
+                
                 //creating div row to contain Cards
 
 
@@ -46,6 +56,10 @@ $("#submitBtn").on("click", function displayInfo(event) {
 
                 var cardContent = $("<div>").addClass("card-content").appendTo(card);
                 var cardTitle = $("<span>").addClass("card-title activator grey-text text-darken-4").appendTo(cardContent);
+                $(".card-title").css({
+                    "font-size": "20px",
+                    
+                })
                 var title = response.hits[i].recipe.label;
                 cardTitle.html(title);
                 var iElement1 = $("<i>").addClass("material-icons right more_vert");
@@ -96,9 +110,7 @@ $("#submitBtn").on("click", function displayInfo(event) {
 
                 })
 
-                $(".heart.fa").click(function() {
-                    $(this).toggleClass("fa-heart fa-heart-o");
-                  });
+              
 
                 
                 
@@ -125,9 +137,22 @@ $("#submitBtn").on("click", function displayInfo(event) {
        
 });
 
-$(".heart.fa").click(function() {
+$(document).on("click", ".heart.fa", function(event) {
     $(this).toggleClass("fa-heart fa-heart-o");
+    $(this)
+      .siblings(".card-content")
+      .children(".instructions");
+    var testValue = $(this)
+      .siblings(".card-content")
+      .find(".instructions");
+    console.log(testValue.attr("href"));
   });
+
+// $(".heart.fa").click(function() {
+//     console.log($(this));
+//     $(this).toggleClass("fa-heart fa-heart-o");
+//     console.log("click");
+//   });
 
 // var whiteHeart = 'favorite_border';
 // var blackHeart = 'favorite';
