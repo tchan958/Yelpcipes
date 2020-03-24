@@ -7,10 +7,11 @@
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,25 +31,79 @@
   <div class="container">
     <!-- jumbotron of the header/-->
     <div class="jumbotron col-sm-10 col-md-offset-1">
-      <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> View Receipes!</h1>
+      <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> Find Recipes!</h1>
     </div>
 
     <form id="recipe-form">
-      <label for="recipes-input">Recipes Search</label>
-      <input type="text" id="keywordSearch">
-      <button id="submitBtn">Submit</button>
+      <input type="text" id="keywordSearch" placeholder="Enter Recipes Search here">
+      <button class="waves-effect waves-light btn" id="submitBtn">Submit</button>
       <br>
       <br>
 
       
-      <div id=resultsList></div>
+      <div id=resultsList>
+        <div class="row">
+          <div class="card col m4">
+            <i class="heart fa fa-heart-o"></i>
+            <div class="card-image waves-effect waves-block waves-light">
+              <span class="activator"><a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a></span>
+              <span class="activator"><img class="activator" src="images/office.jpg"><a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a></span>
+              
+            </div>
+            <div class="card-content">
+              
+              <span class="card-title grey-text text-darken-4">Strawberry Fields Green Salad</span>
+              
+              <p><a class="instructions href="www.google.com">Instructions</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+                   
+      
+          <div class="card col m4">
+            <i class="heart fa fa-heart-o"></i>            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/office.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a class="instructions" href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+                   
+
+          <div class="card col m4">
+            <i class="heart fa fa-heart-o"></i> 
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/office.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+              <p><a href="#">This is a link</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+                   
+
+    </div>
+
+
     </form>
 
     <!--Search with javascript-->
     
 
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="./script.js"></script>
 </body>
 
